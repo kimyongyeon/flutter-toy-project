@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toy_project/pages/converter/converter_main.dart';
 import 'package:toy_project/pages/todo/Todo.dart';
 
 void main() {
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
+
   final String title;
 
   @override
@@ -40,28 +42,39 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Align(
-        alignment: AlignmentDirectional.topCenter,
-        child: Container(
-          height: double.infinity,
-          margin: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const <Widget>[
-              TodoMain()
-            ],
-          ),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+    return ConverterMain();
   }
+
+  // @override
+  // Widget build(BuildContext context) {
+  //   return Scaffold(
+  //     appBar: AppBar(
+  //       title: Text(widget.title),
+  //     ),
+  //     body: Align(
+  //       alignment: AlignmentDirectional.topCenter,
+  //       child: Container(
+  //         decoration: BoxDecoration(
+  //           // color: Color(0xFF42A5F5),
+  //           border: Border.all(
+  //             color: Colors.lightBlueAccent,
+  //             style: BorderStyle.solid,
+  //             width: 10,
+  //           ),
+  //         ),
+  //         height: double.infinity,
+  //         margin: const EdgeInsets.symmetric(horizontal: 8.0),
+  //         child: Column(
+  //           mainAxisAlignment: MainAxisAlignment.center,
+  //           children: const <Widget>[TodoMain()],
+  //         ),
+  //       ),
+  //     ),
+  //     floatingActionButton: FloatingActionButton(
+  //       onPressed: _incrementCounter,
+  //       tooltip: 'Increment',
+  //       child: const Icon(Icons.add),
+  //     ), // This trailing comma makes auto-formatting nicer for build methods.
+  //   );
+  // }
 }

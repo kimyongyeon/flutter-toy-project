@@ -10,7 +10,15 @@ class MainIndex extends StatefulWidget {
 class _MainIndexState extends State<MainIndex> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Container(
+      decoration: BoxDecoration(
+        color: Color(0xFF42A5F5),
+        border: Border.all(
+          color: Colors.black,
+          style: BorderStyle.solid,
+          width: 10,
+        ),
+      ),
       child: Column(
         children: const [
           Text('hello world'),
