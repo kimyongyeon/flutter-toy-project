@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toy_project/pages/converter/converter_main.dart';
+import 'package:toy_project/pages/store/store_main.dart';
 import 'package:toy_project/pages/todo/Todo.dart';
 
 void main() {
@@ -42,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return ConverterMain();
+    return StoreMain();
   }
 
   // @override
