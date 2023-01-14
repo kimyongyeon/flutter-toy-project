@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:toy_project/pages/converter/converter_main.dart';
-import 'package:toy_project/pages/recipe/recipe_main.dart';
-import 'package:toy_project/pages/store/store_main.dart';
+import 'package:toy_project/pages/profile/profile_main.dart';
 import 'package:toy_project/pages/todo/Todo.dart';
+import 'package:toy_project/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,11 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Todo List',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Center(child: MyHomePage(title: 'Todo List')),
+      theme: theme(),
+      home: const ProfilePage(),
     );
   }
 }
@@ -45,39 +41,34 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return RecipeMain();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Align(
+        alignment: AlignmentDirectional.topCenter,
+        child: Container(
+          decoration: BoxDecoration(
+            // color: Color(0xFF42A5F5),
+            border: Border.all(
+              color: Colors.lightBlueAccent,
+              style: BorderStyle.solid,
+              width: 10,
+            ),
+          ),
+          height: double.infinity,
+          margin: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const <Widget>[TodoMain()],
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
   }
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return Scaffold(
-  //     appBar: AppBar(
-  //       title: Text(widget.title),
-  //     ),
-  //     body: Align(
-  //       alignment: AlignmentDirectional.topCenter,
-  //       child: Container(
-  //         decoration: BoxDecoration(
-  //           // color: Color(0xFF42A5F5),
-  //           border: Border.all(
-  //             color: Colors.lightBlueAccent,
-  //             style: BorderStyle.solid,
-  //             width: 10,
-  //           ),
-  //         ),
-  //         height: double.infinity,
-  //         margin: const EdgeInsets.symmetric(horizontal: 8.0),
-  //         child: Column(
-  //           mainAxisAlignment: MainAxisAlignment.center,
-  //           children: const <Widget>[TodoMain()],
-  //         ),
-  //       ),
-  //     ),
-  //     floatingActionButton: FloatingActionButton(
-  //       onPressed: _incrementCounter,
-  //       tooltip: 'Increment',
-  //       child: const Icon(Icons.add),
-  //     ), // This trailing comma makes auto-formatting nicer for build methods.
-  //   );
-  // }
 }
