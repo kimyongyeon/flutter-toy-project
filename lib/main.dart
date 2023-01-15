@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:toy_project/pages/profile/profile_main.dart';
+import 'package:toy_project/pages/home.dart';
+import 'package:toy_project/pages/login/login_main.dart';
 import 'package:toy_project/pages/todo/Todo.dart';
 import 'package:toy_project/theme.dart';
 
@@ -15,8 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: theme(),
-      home: const ProfilePage(),
+      theme: buttonTheme(),
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => LoginMain(),
+        '/home': (context) => HomePage(),
+      },
     );
   }
 }
