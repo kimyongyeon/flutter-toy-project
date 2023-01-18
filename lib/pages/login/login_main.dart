@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:toy_project/components/custom_form.dart';
 import 'package:toy_project/components/logo.dart';
 
@@ -26,6 +25,10 @@ class _LoginMainState extends State<LoginMain> {
             Logo(
               title: '로그인',
             ),
+            SizedBox(height: large_gap,),
+            TextButton(onPressed: () {
+              Navigator.pushNamed(context, "/shopping_cart");
+            }, child: Text('쇼핑앱으로 이동 .... ')),
             SizedBox(height: large_gap,),
             CustomForm(),
           ],

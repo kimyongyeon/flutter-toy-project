@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toy_project/pages/home.dart';
 import 'package:toy_project/pages/login/login_main.dart';
+import 'package:toy_project/pages/shopping_cart/shopping_cart.dart';
 import 'package:toy_project/pages/todo/Todo.dart';
 import 'package:toy_project/theme.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => LoginMain(),
         '/home': (context) => HomePage(),
+        '/shopping_cart': (context) => ShoppingCart()
       },
     );
   }

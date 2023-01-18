@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toy_project/material.dart';
 
 ThemeData theme() {
   return ThemeData(
@@ -21,5 +22,12 @@ ThemeData buttonTheme() {
         minimumSize: Size(400, 60)
       )
     )
+  );
+}
+
+ThemeData shoppingCartTheme() {
+  return ThemeData(
+    primaryColor: kPrimaryColor,
+    scaffoldBackgroundColor: kPrimaryColor,
   );
 }
