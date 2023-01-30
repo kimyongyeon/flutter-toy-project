@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toy_project/pages/shopping_cart/shopping_cart_detail.dart';
 import 'package:toy_project/pages/shopping_cart/shopping_cart_header.dart';
 
 class ShoppingCart extends StatelessWidget {
@@ -13,6 +14,7 @@ class ShoppingCart extends StatelessWidget {
           children: [
             ShoppingCartHeader(),
             sectionContainer(context),
+            ShoppingCartDetail(),
           ],
         ),
       ),
