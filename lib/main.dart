@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toy_project/pages/airbnb/airbnb_page.dart';
 import 'package:toy_project/pages/home.dart';
 import 'package:toy_project/pages/login/login_main.dart';
 import 'package:toy_project/pages/shopping_cart/shopping_cart.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => LoginMain(),
         '/home': (context) => HomePage(),
-        '/shopping_cart': (context) => ShoppingCart()
+        '/shopping_cart': (context) => ShoppingCart(),
+        '/airbnb': (context) => AirbnbPage(),
       },
     );
   }

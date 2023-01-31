@@ -30,6 +30,10 @@ class _LoginMainState extends State<LoginMain> {
               Navigator.pushNamed(context, "/shopping_cart");
             }, child: Text('쇼핑앱으로 이동 .... ')),
             SizedBox(height: large_gap,),
+            TextButton(onPressed: () {
+              Navigator.pushNamed(context, "/airbnb");
+            }, child: Text('모두의 숙소 ')),
+            SizedBox(height: large_gap,),
             CustomForm(),
           ],
         ),
