@@ -34,6 +34,10 @@ class _LoginMainState extends State<LoginMain> {
               Navigator.pushNamed(context, "/airbnb");
             }, child: Text('모두의 숙소 ')),
             SizedBox(height: large_gap,),
+            TextButton(onPressed: () {
+              Navigator.pushNamed(context, "/chat");
+            }, child: Text('모두모두톡 ')),
+            SizedBox(height: large_gap,),
             CustomForm(),
           ],
         ),
