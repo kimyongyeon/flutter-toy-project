@@ -9,7 +9,16 @@ class FriendScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(title: Text("친구", style: TextStyle(color: Colors.black),),),
+      appBar: AppBar(
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              SizedBox(width: 5,),
+              Text("친구", style: TextStyle(color: Colors.black, fontSize: 20),),
+            ],
+          ),
+        ),),
       body: Column(
         children: [
           SizedBox(height: 10,),
